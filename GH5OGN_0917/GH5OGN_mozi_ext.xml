@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mozi>
+    <film id="txn_nxm_2jb" mufaj="horror">
+        <rendezo id="nzk_4xm_2jb" nev="alex"></rendezo>
+        <szinesz id="u5q_4xm_2jb" nev="Madison_Ivy"></szinesz>
+        <szinesz id="a"/>
+          <gyerekszinesz />
+          <musicalszinesz />
+          <szinkronszinesz />
+        </szinesz>
+        <iro id="trv_4xm_2jb"/>
+    </film>
+    <film id="1" mufaj="drama">
+        <rendezo id="dir1" nev="Steven Spielberg">
+            <gyerekrendezo id="grd_001" nev="GyerekDirector 1"/>
+            <gyerekrendezo id="grd_002" nev="GyerekDirector 2"/>
+        </rendezo>
+        <iro id="iro_1" nev="John Smith">
+            <gyerekiro id="gwr_001" nev="Cwriter 1"/>
+            <gyerekiro id="gwr_002" nev="Cwriter 2"/>
+        </iro>
+    </film>
+</mozi>
