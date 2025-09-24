@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE GH5OGN_kurzusfelvetel SYSTEM "GH5OGN_kurzusfelvetel.dtd">
+<Y4O4X0_kurzusfelvetel tanev="2025/26" egyetem="Miskolci Egyetem">
+    <hallgato>
+        <hnev>Balla Levente Dávid</hnev>
+        <szulev>2003.09.20.</szulev>
+        <szak evf="2023">Mérnökinformatika</szak>
+    </hallgato>
+    <kurzusok>
+        <kurzus id="GEVEE050-BL2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Elektrotechnika és elektronika</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                3. előadó
+            </hely>
+            <oraado>Szabó Nórbert</oraado>
+            <idopont>Hétfő 8:00 - 10:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Szabó Nórbert</oktato>
+        </kurzus>
+        <kurzus id="GEIAL331-BL2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Web technológiák I</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                5. előadó
+            </hely>
+            <oraado>Agárdi Anita</oraado>
+            <idopont>Hétfő 10:00 - 12:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Agárdi Anita</oktato>
+        </kurzus>
+        <kurzus id="MEIOKMUSZ%2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Angol szaknyelv</kurzusnev>
+            <kredit>0</kredit>
+            <hely>
+                101-es terem
+            </hely>
+            <idopont>Hétfő 12:00 - 14:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar"></oktato>
+        </kurzus>
+        <kurzus id="GEIAL331-BL2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Web technológiák I</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                Inf/103 
+            </hely>
+            <oraado>Agárdi Anita</oraado>
+            <idopont>Hétfő 14:00 - 16:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar"></oktato>
+        </kurzus>
+        <kurzus id="GEIAL335-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Mobil programozási alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                Inf103 
+            </hely>
+            <idopont>Hétfő 16:00 - 18:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Agárdi Anita</oktato>
+        </kurzus>
+        <kurzus id="GEIAL335-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Mobil programozási alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                Inf103 
+            </hely>
+            <idopont>Hétfő 18:00 - 20:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Agárdi Anita</oktato>
+        </kurzus>
+        <kurzus id="GEIAL30A-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Windows rendszergazda</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                Inf103 
+            </hely>
+            <idopont>Kedd 8:00 - 10:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Wagner György</oktato>
+        </kurzus>
+        <kurzus id="GEIAK130-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Mest. intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                32. előadó
+            </hely>
+            <idopont>Kedd 10:00 - 12:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Kunné Dr Tamás Judit</oktato>
+        </kurzus>
+        <kurzus id="GEIAK130-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Mest. intelligencia alapok</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                32. előadó
+            </hely>
+            <idopont>Kedd 12:00 - 14:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Fazekas Levente</oktato>
+        </kurzus>
+        <kurzus id="GEVEE050-BL2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Elektrotechnika és elektronika</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                317-es terem
+            </hely>
+            <idopont>Szerda 14:00 - 16:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Dr Kozsely Gábor</oktato>
+        </kurzus>
+        <kurzus id="GEIAL30A-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Windows rendszergazda</kurzusnev>
+            <kredit>5</kredit>
+            <hely>
+                Inf103
+            </hely>
+            <idopont>Kedd 16:00 - 18:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Wagner György</oktato>
+        </kurzus>
+        <kurzus id="GEIAL32K-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Webes adatkezelő környezetek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf202</hely>
+            <idopont>Szerda 8:00 - 10:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Dr Kovács László</oktato>
+        </kurzus>
+        <kurzus id="GEIAL32K-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Webes adatkezelő környezetek</kurzusnev>
+            <kredit>5</kredit>
+            <hely>Inf103</hely>
+            <idopont>Szerda 10:00 - 12:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Dr Bednarik László</oktato>
+        </kurzus>
+        <kurzus id="GEIAL314-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Szoftvertechnológia</kurzusnev>
+            <kredit>5</kredit>
+            <hely>3. előadó</hely>
+            <idopont>Szerda 8:00 - 10:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Dr Mileff Péter</oktato>
+        </kurzus>
+        <kurzus id="GEIAL314-B2">
+            <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Szoftvertechnológia</kurzusnev>
+            <kredit>5</kredit>
+            <hely>3. előadó</hely>
+            <idopont>Szerda 10:00 - 12:00</idopont>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Dr Mileff Péter</oktato>
+        </kurzus>
+    </kurzusok>
+</Y4O4X0_kurzusfelvetel>

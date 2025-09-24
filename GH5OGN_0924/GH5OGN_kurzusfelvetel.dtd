@@ -1,0 +1,34 @@
+<!ELEMENT Y4O4X0_kurzusfelvetel (hallgato, kurzusok)>
+<!ELEMENT hallgato (hnev, szulev, szak)>
+<!ELEMENT hnev (#PCDATA)>
+<!ELEMENT szulev (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+
+<!ELEMENT kurzusok (kurzus*)>
+<!ELEMENT kurzus (kurzusnev, kredit, hely, (oktato|oraado)?, idopont+)>
+<!ELEMENT kurzusnev (#PCDATA)>
+<!ELEMENT kredit (#PCDATA)>
+<!ELEMENT hely (#PCDATA)>
+<!ELEMENT oktato (#PCDATA)>
+<!ELEMENT oraado (#PCDATA)>
+<!ELEMENT idopont (#PCDATA)>
+
+<!ATTLIST Y4O4X0_kurzusfelvetel
+    tanev CDATA #REQUIRED
+    egyetem CDATA #REQUIRED>
+
+<!ATTLIST szak
+    evf CDATA #REQUIRED>
+
+<!ATTLIST kurzus
+    id ID #REQUIRED>
+
+<!ATTLIST kurzusnev
+    id ID #REQUIRED
+    jovahagyas (igen|nem) "nem"
+    nyelv CDATA #IMPLIED>
+
+<!ATTLIST oktato
+    id ID #REQUIRED
+    jovahagyas (igen|nem) "nem"
+    nyelv CDATA #IMPLIED>

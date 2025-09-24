@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!ELEMENT mozi (film*)>
+<!ELEMENT film (rendezo+, szinesz+, iro+)>
+<!ATTLIST film id ID #REQUIRED mufaj (thriller|horror|romantikus) #REQUIRED>
+<!ELEMENT rendezo (#PCDATA)>
+<!ATTLIST rendezo id ID #REQUIRED nev CDATA #IMPLIED>
+<!ELEMENT szinesz (gyerekszinesz | musicalszinesz | szinkronszinesz)*>
+<!ATTLIST szinesz id ID #REQUIRED nev CDATA #IMPLIED>
+<!ELEMENT gyerekszinesz (#PCDATA)>
+<!ELEMENT musicalszinesz (#PCDATA)>
+<!ELEMENT szinkronszinesz (#PCDATA)>
+<!ELEMENT iro (#PCDATA)>
+<!ATTLIST iro id ID #REQUIRED>
+
+
+
+
