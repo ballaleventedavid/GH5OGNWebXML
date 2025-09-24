@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konferencia>
+    <cím>Miskolci Egyetemi Konferencia 2025</cím>
+    <helyszín>Miskolci Egyetem</helyszín>
+    <dátum>2025-09-20</dátum>
+    
+    <előadó>
+        <név>Legkissebb Béla</név>
+        <lakcím>Debrecen, Béla utca 12.</lakcím>
+        <adószám>12345678-1-23</adószám>
+    </előadó>
+    
+    <hallgatók>
+        <hallgató>
+            <név>Kiss Béla</név>
+            <lakcím>Budapest, Petőfi utca 3.</lakcím>
+        </hallgató>
+        <hallgató>
+            <név>Nagy  Béla</név>
+            <lakcím>Szeged, Petőfi utca 2.</lakcím>
+        </hallgató>
+        <hallgató>
+            <név>Közepes Béla</név>
+            <lakcím>Pécs, Petőfi utca 1.</lakcím>
+        </hallgató>
+    </hallgatók>
+</konferencia>

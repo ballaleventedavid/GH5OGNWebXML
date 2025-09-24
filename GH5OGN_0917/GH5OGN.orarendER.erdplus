@@ -1,0 +1,308 @@
+{
+  "diagramType": 1,
+  "data": {
+    "nodes": [
+      {
+        "id": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Entity",
+        "position": {
+          "x": 238,
+          "y": 249
+        },
+        "data": {
+          "label": "ora",
+          "type": "Regular",
+          "isConnectable": false,
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "e55eba6c-a5b9-495a-8a7f-fb5020f4f0d5",
+        "parentId": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Attribute",
+        "position": {
+          "x": 9,
+          "y": -100
+        },
+        "data": {
+          "label": "id",
+          "types": {
+            "Unique": true
+          },
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "0def01f2-96b3-4e74-aa10-4bbd39785295",
+        "parentId": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Attribute",
+        "position": {
+          "x": 121.24621202458746,
+          "y": -87.24621202458749
+        },
+        "data": {
+          "label": "tipus",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "b7c36f8b-a09a-4e1b-93d0-791fa99d2988",
+        "parentId": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Attribute",
+        "position": {
+          "x": -144.3382851949733,
+          "y": 59.59479341998815
+        },
+        "data": {
+          "label": "targy",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "15efcfaa-93b5-4b13-80f9-f9f903c8d222",
+        "parentId": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Attribute",
+        "position": {
+          "x": -16.500958020178246,
+          "y": 89.17929063954887
+        },
+        "data": {
+          "label": "idopont",
+          "types": {
+            "Derived": false,
+            "Composite": true
+          },
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "4323be5e-b2fa-4ad2-8a0a-8bbad8ee42f3",
+        "parentId": "15efcfaa-93b5-4b13-80f9-f9f903c8d222",
+        "type": "Attribute",
+        "position": {
+          "x": -64.32710787983393,
+          "y": 59.263864764576056
+        },
+        "data": {
+          "label": "nap",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "da217514-dd1f-4114-8f3d-b54fd13e37f6",
+        "parentId": "15efcfaa-93b5-4b13-80f9-f9f903c8d222",
+        "type": "Attribute",
+        "position": {
+          "x": 54.718339989637855,
+          "y": 61.30019386506268
+        },
+        "data": {
+          "label": "tol",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "7250b566-89a5-42e1-ba95-034cd46aecc4",
+        "parentId": "15efcfaa-93b5-4b13-80f9-f9f903c8d222",
+        "type": "Attribute",
+        "position": {
+          "x": 167.02971116983986,
+          "y": 59.73231445984584
+        },
+        "data": {
+          "label": "ig",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "7b5470ca-17c8-4339-8a2b-a014b3bf1a4f",
+        "parentId": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Attribute",
+        "position": {
+          "x": 109.12634372471837,
+          "y": 72.83644606008306
+        },
+        "data": {
+          "label": "szak",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "1b087547-e709-4c22-8bf8-ba3e4d5cf769",
+        "parentId": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Attribute",
+        "position": {
+          "x": 189.95440962473066,
+          "y": 39.78526137467645
+        },
+        "data": {
+          "label": "oktato",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "32b0630a-bd13-4094-a6a0-acf8b4a80705",
+        "parentId": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "type": "Attribute",
+        "position": {
+          "x": 241.90690320910454,
+          "y": -29.86615722992289
+        },
+        "data": {
+          "label": "helyszin",
+          "types": [],
+          "isSelected": false
+        },
+        "measured": {
+          "width": 100,
+          "height": 50
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "a7437f2d-8732-4e04-b5ef-2f5e6ba62cfb",
+        "type": "Attribute",
+        "source": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "target": "e55eba6c-a5b9-495a-8a7f-fb5020f4f0d5"
+      },
+      {
+        "id": "8eff77ae-657a-43ba-9f80-c2b25746ce8b",
+        "type": "Attribute",
+        "source": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "target": "0def01f2-96b3-4e74-aa10-4bbd39785295"
+      },
+      {
+        "id": "116b8543-1f28-4291-a87f-e90685aa1cf0",
+        "type": "Attribute",
+        "source": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "target": "b7c36f8b-a09a-4e1b-93d0-791fa99d2988"
+      },
+      {
+        "id": "21e2afeb-f75b-4ef6-870e-2e9baceca420",
+        "type": "Attribute",
+        "source": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "target": "15efcfaa-93b5-4b13-80f9-f9f903c8d222"
+      },
+      {
+        "id": "f5ab4974-5ec9-4d26-bb46-123f20c966f2",
+        "type": "Attribute",
+        "source": "15efcfaa-93b5-4b13-80f9-f9f903c8d222",
+        "target": "4323be5e-b2fa-4ad2-8a0a-8bbad8ee42f3"
+      },
+      {
+        "id": "a5b19de3-bf07-4761-b5db-a57e575c154b",
+        "type": "Attribute",
+        "source": "15efcfaa-93b5-4b13-80f9-f9f903c8d222",
+        "target": "da217514-dd1f-4114-8f3d-b54fd13e37f6"
+      },
+      {
+        "id": "4ded18f9-aa2a-487b-ba4d-d65cf51983b7",
+        "type": "Attribute",
+        "source": "15efcfaa-93b5-4b13-80f9-f9f903c8d222",
+        "target": "7250b566-89a5-42e1-ba95-034cd46aecc4"
+      },
+      {
+        "id": "0c82423f-1fb3-4ab9-9a5d-ed8f691a2998",
+        "type": "Attribute",
+        "source": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "target": "7b5470ca-17c8-4339-8a2b-a014b3bf1a4f"
+      },
+      {
+        "id": "65d090f8-9110-4928-8d47-452251724f51",
+        "type": "Attribute",
+        "source": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "target": "1b087547-e709-4c22-8bf8-ba3e4d5cf769"
+      },
+      {
+        "id": "a263b08e-de08-4eb0-b1b1-68855c32651d",
+        "type": "Attribute",
+        "source": "e1d9f907-9dd6-4808-8e23-ea52e810a97c",
+        "target": "32b0630a-bd13-4094-a6a0-acf8b4a80705"
+      }
+    ],
+    "viewport": {
+      "x": 24.698765417111645,
+      "y": 32.019336777479054,
+      "zoom": 0.8705505632961241
+    }
+  },
+  "name": "GH5OGN_orarendER",
+  "folder": {
+    "name": "Diagrams",
+    "folderType": 1,
+    "depth": 0,
+    "id": 47886
+  },
+  "id": 51364,
+  "updatedAtTimestamp": 1758544962
+}
