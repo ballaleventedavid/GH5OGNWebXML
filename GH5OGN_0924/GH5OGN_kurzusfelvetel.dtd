@@ -1,4 +1,4 @@
-<!ELEMENT Y4O4X0_kurzusfelvetel (hallgato, kurzusok)>
+<!ELEMENT GH5OGN_kurzusfelvetel (hallgato, kurzusok)>
 <!ELEMENT hallgato (hnev, szulev, szak)>
 <!ELEMENT hnev (#PCDATA)>
 <!ELEMENT szulev (#PCDATA)>
@@ -13,7 +13,7 @@
 <!ELEMENT oraado (#PCDATA)>
 <!ELEMENT idopont (#PCDATA)>
 
-<!ATTLIST Y4O4X0_kurzusfelvetel
+<!ATTLIST GH5OGN_kurzusfelvetel
     tanev CDATA #REQUIRED
     egyetem CDATA #REQUIRED>
 

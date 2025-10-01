@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+  <xs:simpleType name="tanevTipus">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{4}/\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="egyetemTipus">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="idTipus">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="igenNemTipus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="igen"/>
+      <xs:enumeration value="nem"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:element name="hnev" type="xs:string"/>
+  <xs:element name="szulev" type="xs:date"/>
+  <xs:element name="szak" type="xs:string"/>
+  <xs:element name="kurzusnev" type="xs:string"/>
+  <xs:element name="kredit" type="xs:nonNegativeInteger"/>
+  <xs:element name="hely" type="xs:string"/>
+  <xs:element name="oraado" type="xs:string"/>
+  <xs:element name="idopont" type="xs:string"/>
+  <xs:element name="oktato" type="xs:string"/>
+
+
+  <xs:attribute name="tanev" type="tanevTipus"/>
+  <xs:attribute name="egyetem" type="egyetemTipus"/>
+  <xs:attribute name="evf" type="xs:positiveInteger"/>
+  <xs:attribute name="id" type="idTipus"/>
+  <xs:attribute name="jovahagyas" type="igenNemTipus"/>
+  <xs:attribute name="nyelv" type="xs:string"/>
+
+
+  <xs:element name="GH5OGN_kurzusfelvetel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hallgato"/>
+        <xs:element ref="kurzusok"/>
+      </xs:sequence>
+      <xs:attribute ref="tanev" use="required"/>
+      <xs:attribute ref="egyetem" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="hallgato">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="hnev"/>
+        <xs:element ref="szulev"/>
+        <xs:element ref="szak"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="szak">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute ref="evf" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="kurzusok">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="kurzus" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="kurzus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="kurzusnev"/>
+        <xs:element ref="kredit"/>
+        <xs:element ref="hely"/>
+        <xs:element ref="oraado" minOccurs="0"/>
+        <xs:element ref="idopont"/>
+        <xs:element ref="oktato"/>
+      </xs:sequence>
+      <xs:attribute ref="id" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:element name="kurzusnev">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute ref="id" use="required"/>
+          <xs:attribute ref="jovahagyas" use="required"/>
+          <xs:attribute ref="nyelv" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="oktato">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute ref="id" use="required"/>
+          <xs:attribute ref="jovahagyas" use="required"/>
+          <xs:attribute ref="nyelv" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
