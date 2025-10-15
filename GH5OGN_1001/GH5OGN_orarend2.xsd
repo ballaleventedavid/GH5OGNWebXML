@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="" 
+           xmlns="" 
+           elementFormDefault="qualified">
+
+  <!-- Simple type definitions -->
+  <xs:simpleType name="OraTipusType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Elmélet"/>
+      <xs:enumeration value="Gyakorlat"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="IdoType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-2][0-9]:[0-5][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="NapType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Hétfő"/>
+      <xs:enumeration value="Kedd"/>
+      <xs:enumeration value="Szerda"/>
+      <xs:enumeration value="Csütörtök"/>
+      <xs:enumeration value="Péntek"/>
+      <xs:enumeration value="Szombat"/>
+      <xs:enumeration value="Vasárnap"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Complex type definitions -->
+  <xs:complexType name="IdopontType">
+    <xs:sequence>
+      <xs:element name="nap" type="NapType"/>
+      <xs:element name="tol" type="IdoType"/>
+      <xs:element name="ig" type="IdoType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="OraType">
+    <xs:sequence>
+      <xs:element name="targy" type="xs:string"/>
+      <xs:element name="idopont" type="IdopontType"/>
+      <xs:element name="helyszin" type="xs:string"/>
+      <xs:element name="oktato" type="xs:string"/>
+      <xs:element name="szak" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="tipus" type="OraTipusType" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="OrarendType">
+    <xs:sequence>
+      <xs:element name="ora" type="OraType" maxOccurs="unbounded" minOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Root element -->
+  <xs:element name="GH5OGN_orarend" type="OrarendType"/>
+
+</xs:schema>

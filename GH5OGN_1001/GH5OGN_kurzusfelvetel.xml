@@ -15,7 +15,7 @@
             </hely>
             <oraado>Szabó Nórbert</oraado>
             <idopont>Hétfő 8:00 - 10:00</idopont>
-            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Szabó Nórbert</oktato>
+            <oktato id="okt1" jovahagyas="igen" nyelv="magyar">Szabó Norbert</oktato>
         </kurzus>
         <kurzus id="GEIAL331-BL2">
             <kurzusnev id="k1" jovahagyas="igen" nyelv="magyar">Web technológiák I</kurzusnev>

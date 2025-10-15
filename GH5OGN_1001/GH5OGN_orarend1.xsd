@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="GH5OGN_orarend">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="ora"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="ora">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="targy"/>
+        <xs:element ref="idopont"/>
+        <xs:element ref="helyszin"/>
+        <xs:element ref="oktato"/>
+        <xs:element ref="szak"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:string"/>
+      <xs:attribute name="tipus" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="targy" type="xs:string"/>
+
+  <xs:element name="idopont">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="nap"/>
+        <xs:element ref="tol"/>
+        <xs:element ref="ig"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="nap" type="xs:string"/>
+
+  <xs:element name="tol" type="xs:string"/>
+
+  <xs:element name="ig" type="xs:string"/>
+
+  <xs:element name="helyszin" type="xs:string"/>
+
+  <xs:element name="oktato" type="xs:string"/>
+
+  <xs:element name="szak" type="xs:string"/>
+
+</xs:schema>

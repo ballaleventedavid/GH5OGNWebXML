@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+
+
+    <xs:simpleType name="OraTipusTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Elmélet"/>
+            <xs:enumeration value="Gyakorlat"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+
+    <xs:simpleType name="NapTipus">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Hétfő"/>
+            <xs:enumeration value="Kedd"/>
+            <xs:enumeration value="Szerda"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="IdopontOraTipus">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="8"/>
+            <xs:maxInclusive value="18"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    
+
+    <xs:complexType name="IdopontTipus">
+        <xs:sequence>
+            <xs:element name="nap" type="NapTipus"/>
+            <xs:element name="tol" type="IdopontOraTipus"/>
+            <xs:element name="ig" type="IdopontOraTipus"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="OraTipus">
+        <xs:sequence>
+            <xs:element name="targy" type="xs:string"/>
+            <xs:element name="idopont" type="IdopontTipus"/>
+            <xs:element name="helyszin" type="xs:string"/>
+            <xs:element name="oktato" type="xs:string"/>
+            <xs:element name="szak" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="tipus" type="OraTipusTipus" use="required"/>
+    </xs:complexType>
+
+    <xs:element name="GH5OGN_orarend">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ora" type="OraTipus" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
