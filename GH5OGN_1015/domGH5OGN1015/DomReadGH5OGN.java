@@ -1,7 +1,6 @@
 package domGH5OGN1015;
 
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -9,8 +8,11 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.io.IOException;
+import javax.xml.parsers.ParserConfigurationException;
+import org.xml.sax.SAXException;
 
-public class DomReadNeptunkod {
+public class DomReadGH5OGN {
     public static void main(String[] args) {
         String xmlPath = "GH5OGN_orarend.xml";
         try {
@@ -25,9 +27,8 @@ public class DomReadNeptunkod {
 
             System.out.println("Blokk formájú kiírás: \n");
             DOMRead.printDocument(document);
-        } catch (Exception e) {
+        } catch (IOException | ParserConfigurationException | SAXException e) {
             System.err.println("Hiba az XML beolvasásakor: " + e.getMessage());
-            e.printStackTrace();
         }
     }
 }
@@ -40,11 +41,11 @@ class DOMRead {
 
     private static void printNode(Node node, int indent) {
         switch (node.getNodeType()) {
-            case Node.ELEMENT_NODE:
+            case Node.ELEMENT_NODE -> {
                 printIndent(indent);
                 System.out.print("<" + node.getNodeName());
 
-                // attribútumok
+                
                 NamedNodeMap attrs = node.getAttributes();
                 if (attrs != null) {
                     for (int i = 0; i < attrs.getLength(); i++) {
@@ -54,7 +55,7 @@ class DOMRead {
                 }
                 System.out.println(">");
 
-                // gyerekek és szöveg
+                
                 NodeList children = node.getChildNodes();
                 for (int i = 0; i < children.getLength(); i++) {
                     Node child = children.item(i);
@@ -74,18 +75,16 @@ class DOMRead {
 
                 printIndent(indent);
                 System.out.println("</" + node.getNodeName() + ">");
-                break;
+            }
 
-            case Node.DOCUMENT_NODE:
-                // dokumentum gyökér továbbléptetése
+            case Node.DOCUMENT_NODE -> 
                 printNode(((Document) node).getDocumentElement(), indent);
-                break;
 
-            default:
-                // egyéb node típusokat (CDATA, PROCESSING_INSTRUCTION stb.) opcionálisan kezelhetünk
-                break;
+            default -> {
+            }
         }
-    }
+        
+            }
 
     private static void printIndent(int indent) {
         for (int i = 0; i < indent; i++) {
@@ -93,5 +92,4 @@ class DOMRead {
         }
     }
 }
-
 
