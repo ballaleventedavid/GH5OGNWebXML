@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- egyszerű tipusok - felepites -->
+    <xs:element name="EtelRendeloRendszer">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Vasarlok" type="VasarlokTipus"/>
+                <xs:element name="Ettermek" type="EttermekTipus"/>
+                <xs:element name="Futarok" type="FutarokTipus"/>
+                <xs:element name="Etelek" type="EtelekTipus"/>
+                <xs:element name="Rendelesek" type="RendelesekTipus"/>
+            </xs:sequence>
+        </xs:complexType>
+
+
+        <!-- Kulcsok -->
+        <xs:key name="VasarPK">
+            <xs:selector xpath="Vasarlok/Vasarlo"/>
+            <xs:field xpath="@vevo_id"/>
+        </xs:key>
+        <xs:key name="EtteremPK">
+            <xs:selector xpath="Ettermek/Etterem"/>
+            <xs:field xpath="@etterem_id"/>
+        </xs:key>
+        <xs:key name="FutarPK">
+            <xs:selector xpath="Futarok/Futar"/>
+            <xs:field xpath="@futar_id"/>
+        </xs:key>
+        <xs:key name="EtelPK">
+            <xs:selector xpath="Etelek/Etel"/>
+            <xs:field xpath="@etel_id"/>
+        </xs:key>
+        <xs:key name="RendelesPK">
+            <xs:selector xpath="Rendelesek/Rendeles"/>
+            <xs:field xpath="@rendeles_id"/>
+        </xs:key>
+
+        <!-- Idegen kulcsok -->
+        <xs:keyref name="RendelesVevoFK" refer="VasarPK">
+            <xs:selector xpath="Rendelesek/Rendeles"/>
+            <xs:field xpath="@vevo_idref"/>
+        </xs:keyref>
+        <xs:keyref name="RendelesEtteremFK" refer="EtteremPK">
+            <xs:selector xpath="Rendelesek/Rendeles"/>
+            <xs:field xpath="@etterem_idref"/>
+        </xs:keyref>
+        <xs:keyref name="RendelesFutarFK" refer="FutarPK">
+            <xs:selector xpath="Rendelesek/Rendeles"/>
+            <xs:field xpath="@futar_idref"/>
+        </xs:keyref>
+        <xs:keyref name="EtelEtteremFK" refer="EtteremPK">
+            <xs:selector xpath="Etelek/Etel"/>
+            <xs:field xpath="@etterem_idref"/>
+        </xs:keyref>
+        <xs:keyref name="TetelEtelFK" refer="EtelPK">
+            <xs:selector xpath="Rendelesek/Rendeles/RendelesTetelei/Tetel"/>
+            <xs:field xpath="@etel_idref"/>
+        </xs:keyref>
+
+    </xs:element>
+    <!-- Vásárlók típusa -->
+    <xs:complexType name="VasarlokTipus">
+        <xs:sequence>
+            <xs:element name="Vasarlo" type="VasarTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="VasarTipus">
+        <xs:sequence>
+            <xs:element name="Nev" type="NevTipus"/>
+            <xs:element name="Email" type="xs:string"/>
+            <xs:element name="Telefonszam" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="MentettCimek" type="MentettCimekTipus"/>
+        </xs:sequence>
+        <xs:attribute name="vevo_id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <!-- Név típusa -->
+    <xs:complexType name="NevTipus">
+        <xs:sequence>
+            <xs:element name="Vezeteknev" type="xs:string"/>
+            <xs:element name="Keresztnev" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Cimek típusa -->
+    <xs:complexType name="CimTipus">
+        <xs:sequence>
+            <xs:element name="Irsz" type="xs:string"/>
+            <xs:element name="Varos" type="xs:string"/>
+            <xs:element name="Utca" type="xs:string"/>
+            <xs:element name="Hsz" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="MentettCimekTipus">
+        <xs:sequence>
+            <xs:element name="Cim" type="CimTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Éttermek típusa -->
+    <xs:complexType name="EttermekTipus">
+        <xs:sequence>
+            <xs:element name="Etterem" type="EtteremTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="EtteremTipus">
+        <xs:sequence>
+            <xs:element name="Nev" type="xs:string"/>
+            <xs:element name="Cim" type="CimTipus"/>
+            <xs:element name="Kategoria" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="Nyitvatartas" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="etterem_id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <!-- Futárok típusa -->
+    <xs:complexType name="FutarokTipus">
+        <xs:sequence>
+            <xs:element name="Futar" type="FutarTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FutarTipus">
+        <xs:sequence>
+            <xs:element name="Nev" type="NevTipus"/>
+            <xs:element name="Telefonszam" type="xs:string"/>
+            <xs:element name="JarmuRendszam" type="xs:string"/>
+            <xs:element name="Ertekeles" type="xs:decimal"/>
+        </xs:sequence>
+        <xs:attribute name="futar_id" type="xs:string" use="required"/>
+    </xs:complexType>
+    <!-- Étel típusa -->
+    <xs:complexType name="EtelekTipus">
+        <xs:sequence>
+            <xs:element name="Etel" type="EtelTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Étel típusa -->
+    <xs:complexType name="EtelTipus">
+        <xs:sequence>
+            <xs:element name="Nev" type="xs:string"/>
+            <xs:element name="Ar" type="xs:positiveInteger"/>
+            <xs:element name="Leiras" type="xs:string" minOccurs="0"/>
+            <xs:element name="Allergenek" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="etel_id" type="xs:string" use="required"/>
+        <xs:attribute name="etterem_idref" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="RendelesekTipus">
+        <xs:sequence>
+            <xs:element name="Rendeles" type="RendelesTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- Rendelés típusa -->
+    <xs:complexType name="RendelesTipus">
+        <xs:sequence>
+            <xs:element name="RendelesIdeje" type="xs:dateTime"/>
+            <xs:element name="Statusz" type="xs:string"/>
+            <xs:element name="SzallitasiCim" type="CimTipus"/>
+            <xs:element name="Vegosszeg" type="xs:positiveInteger"/>
+            <xs:element name="RendelesTetelei" type="RendelesTeteleiTipus"/>
+        </xs:sequence>
+        <xs:attribute name="rendeles_id" type="xs:string" use="required"/>
+        <xs:attribute name="vevo_idref" type="xs:string" use="required"/>
+        <xs:attribute name="etterem_idref" type="xs:string" use="required"/>
+        <xs:attribute name="futar_idref" type="xs:string" use="required"/>
+    </xs:complexType>
+    <!-- Rendelés tételei típusa -->
+    <xs:complexType name="RendelesTeteleiTipus">
+        <xs:sequence>
+            <xs:element name="Tetel" type="TetelTipus" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- tétel típusa -->
+    <xs:complexType name="TetelTipus">
+        <xs:sequence>
+            <xs:element name="Darabszam" type="xs:positiveInteger"/>
+            <xs:element name="VasarlaskoriAr" type="xs:positiveInteger"/>
+            <xs:element name="ExtraKeresek" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="etel_idref" type="xs:string" use="required"/>
+    </xs:complexType>
+
+</xs:schema>

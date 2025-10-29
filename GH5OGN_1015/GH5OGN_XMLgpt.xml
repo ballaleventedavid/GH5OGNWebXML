@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GH5OGN_vendeglatas>
+    <etteremek>
+        <etterem ekod="e001">
+            <nev>Arany Oroszlán</nev>
+            <csillag>4</csillag>
+            <cim>
+                <varos>Budapest</varos>
+                <utca>Fő utca</utca>
+                <hazszam>1</hazszam>
+            </cim>
+        </etterem>
+        <etterem ekod="e002">
+            <nev>Ezüst Villa</nev>
+            <csillag>5</csillag>
+            <cim>
+                <varos>Debrecen</varos>
+                <utca>Kossuth utca</utca>
+                <hazszam>10</hazszam>
+            </cim>
+        </etterem>
+    </etteremek>
+
+    <alkalmazottak>
+        <foszakacsok>
+            <foszakacs fkod="f001" etterem_kod="e001">
+                <nev>Kovács János</nev>
+                <eletkor>52</eletkor>
+                <vegzettseg>MesterSzakács</vegzettseg>
+            </foszakacs>
+            <foszakacs fkod="f002" etterem_kod="e002">
+                <nev>Nagy Ilona</nev>
+                <eletkor>48</eletkor>
+                <vegzettseg>Aranydiplomás</vegzettseg>
+            </foszakacs>
+        </foszakacsok>
+        <szakacsok>
+            <szakacs szkod="sz001" etterem_kod="e001">
+                <nev>Kiss Máté</nev>
+                <reszleg>Melegkonyha</reszleg>
+                <vegzettseg>Szakács</vegzettseg>
+            </szakacs>
+            <szakacs szkod="sz002" etterem_kod="e001">
+                <nev>Szabó Éva</nev>
+                <reszleg>Hidegkonyha</reszleg>
+                <vegzettseg>Cukrász</vegzettseg>
+            </szakacs>
+            <szakacs szkod="sz003" etterem_kod="e002">
+                <nev>Tóth Géza</nev>
+                <reszleg>Grill</reszleg>
+                <vegzettseg>Grillszakács</vegzettseg>
+            </szakacs>
+        </szakacsok>
+        <gyakornokok>
+            <gyakornok gykod="gy001" etterem_kod="e001">
+                <nev>Varga Péter</nev>
+                <muszak>Délután</muszak>
+                <gyakorlat>
+                    <kezdete>2025-01-15</kezdete>
+                    <idotartama>3 hónap</idotartama>
+                </gyakorlat>
+            </gyakornok>
+        </gyakornokok>
+    </alkalmazottak>
+
+    <vendegek>
+        <vendeg vkod="v001">
+            <nev>Horváth Anna</nev>
+            <eletkor>29</eletkor>
+            <cim>
+                <varos>Budapest</varos>
+                <utca>Mellék utca</utca>
+                <hazszam>42</hazszam>
+            </cim>
+        </vendeg>
+        <vendeg vkod="v002">
+            <nev>Fehér László</nev>
+            <eletkor>35</eletkor>
+            <cim>
+                <varos>Debrecen</varos>
+                <utca>Almafa sor</utca>
+                <hazszam>5</hazszam>
+            </cim>
+        </vendeg>
+    </vendegek>
+
+    <rendelesek>
+        <rendeles rkod="r001" vendeg_kod="v001" etterem_kod="e001">
+            <osszeg>22000</osszeg>
+            <etelek>
+                <etel>Gulyásleves</etel>
+                <etel>Bécsi szelet</etel>
+            </etelek>
+        </rendeles>
+        <rendeles rkod="r002" vendeg_kod="v002" etterem_kod="e002">
+            <osszeg>35000</osszeg>
+            <etelek>
+                <etel>Hortobágyi húsos palacsinta</etel>
+                <etel>Töltött káposzta</etel>
+                <etel>Somlói galuska</etel>
+            </etelek>
+        </rendeles>
+        <rendeles rkod="r003" vendeg_kod="v001" etterem_kod="e001">
+            <osszeg>18000</osszeg>
+            <etelek>
+                <etel>Halászlé</etel>
+                <etel>Túrós csusza</etel>
+            </etelek>
+        </rendeles>
+    </rendelesek>
+</GH5OGN_vendeglatas>

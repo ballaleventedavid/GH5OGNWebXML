@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EtelRendeloRendszer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:noNamespaceSchemaLocation="GH5OGN_XMLSchema.xsd">
+
+    <Vasarlok>
+        <Vasarlo vevo_id="V001">
+            <Nev>
+                <Vezeteknev>Balla</Vezeteknev>
+                <Keresztnev>Levente</Keresztnev>
+            </Nev>
+            <Email>ballalevented@gmail.com</Email>
+            <Telefonszam>+36301234567</Telefonszam>
+            <Telefonszam>+36709876543</Telefonszam>
+            <MentettCimek>
+                <Cim>
+                    <Irsz>3530</Irsz>
+                    <Varos>Miskolc</Varos>
+                    <Utca>Szent István utca</Utca>
+                    <Hsz>67</Hsz>
+                </Cim>
+                <Cim>
+                    <Irsz>3515</Irsz>
+                    <Varos>Miskolc</Varos>
+                    <Utca>Egyetem utca</Utca>
+                    <Hsz>23</Hsz>
+                </Cim>
+            </MentettCimek>
+        </Vasarlo>
+        <Vasarlo vevo_id="V002">
+            <Nev>
+                <Vezeteknev>Kun</Vezeteknev>
+                <Keresztnev>Dávid</Keresztnev>
+            </Nev>
+            <Email>kundavid@gmail.com</Email>
+            <Telefonszam>+36205551122</Telefonszam>
+            <MentettCimek>
+                <Cim>
+                    <Irsz>3551</Irsz>
+                    <Varos>Ónod</Varos>
+                    <Utca>Honvéd utca</Utca>
+                    <Hsz>5</Hsz>
+                </Cim>
+            </MentettCimek>
+        </Vasarlo>
+    </Vasarlok>
+
+    <Ettermek>
+        <Etterem etterem_id="E001">
+            <Nev>Lángocska</Nev>
+            <Cim>
+                <Irsz>3525</Irsz>
+                <Varos>Miskolc</Varos>
+                <Utca>Búza tér</Utca>
+                <Hsz>62</Hsz>
+            </Cim>
+            <Kategoria>Magyaros</Kategoria>
+            <Kategoria>Lángos</Kategoria>
+            <Nyitvatartas>H-P: 6:00-17:00</Nyitvatartas>
+        </Etterem>
+        <Etterem etterem_id="E002">
+            <Nev>Pizza Király</Nev>
+            <Cim>
+                <Irsz>3532</Irsz>
+                <Varos>Miskolc</Varos>
+                <Utca>Jó utca</Utca>
+                <Hsz>13</Hsz>
+            </Cim>
+            <Kategoria>Olasz</Kategoria>
+            <Kategoria>Pizza</Kategoria>
+            <Nyitvatartas>K-V: 12:00-22:00</Nyitvatartas>
+        </Etterem>
+    </Ettermek>
+
+    <Futarok>
+        <Futar futar_id="F001">
+            <Nev>
+                <Vezeteknev>Benke</Vezeteknev>
+                <Keresztnev>Gábor</Keresztnev>
+            </Nev>
+            <Telefonszam>+36703456789</Telefonszam>
+            <JarmuRendszam>XSD-111</JarmuRendszam>
+            <Ertekeles>4.8</Ertekeles>
+        </Futar>
+        <Futar futar_id="F002">
+            <Nev>
+                <Vezeteknev>Kun</Vezeteknev>
+                <Keresztnev>Damján</Keresztnev>
+            </Nev>
+            <Telefonszam>+36304666842</Telefonszam>
+            <JarmuRendszam>XML-001</JarmuRendszam>
+            <Ertekeles>4.5</Ertekeles>
+        </Futar>
+    </Futarok>
+
+    <Etelek>
+        <Etel etel_id="ET001" etterem_idref="E001">
+            <Nev>Sajtos Lángos</Nev>
+            <Ar>1400</Ar>
+            <Leiras>Sajt, lángos tészta</Leiras>
+            </Etel>
+        <Etel etel_id="ET002" etterem_idref="E001">
+            <Nev>Sajtos-tejfölös lángos</Nev>
+            <Ar>1800</Ar>
+            <Leiras>Sajt, tejföl, lángos tészta</Leiras>
+            <Allergenek>Glutén</Allergenek>
+            <Allergenek>Laktóz</Allergenek>
+        </Etel>
+         <Etel etel_id="ET003" etterem_idref="E002">
+            <Nev>Sonkás pizza</Nev>
+            <Ar>2800</Ar>
+            <Leiras>Paradicsomos alap, sonka, sajt</Leiras>
+            <Allergenek>Glutén</Allergenek>
+            <Allergenek>Laktóz</Allergenek>
+        </Etel>
+        <Etel etel_id="ET004" etterem_idref="E002">
+            <Nev>Hawaii pizza</Nev>
+            <Ar>3000</Ar>
+            <Leiras>Paradicsomos alap, sonka, ananász, sajt</Leiras>
+            <Allergenek>Glutén</Allergenek>
+            <Allergenek>Laktóz</Allergenek>
+        </Etel>
+    </Etelek>
+
+    <Rendelesek>
+        <Rendeles rendeles_id="R001" vevo_idref="V001" etterem_idref="E001" futar_idref="F001">
+            <RendelesIdeje>2025-10-27T19:30:00</RendelesIdeje>
+            <Statusz>Kiszállítva</Statusz>
+            <SzallitasiCim>
+                <Irsz>3530</Irsz>
+                <Varos>Miskolc</Varos>
+                <Utca>Szent István utca</Utca>
+                <Hsz>1</Hsz>
+            </SzallitasiCim>
+            <Vegosszeg>3200</Vegosszeg>
+            <RendelesTetelei>
+                <Tetel etel_idref="ET001">
+                    <Darabszam>1</Darabszam>
+                    <VasarlaskoriAr>1400</VasarlaskoriAr>
+                    <ExtraKeresek>Extra sajttal</ExtraKeresek>
+                </Tetel>
+                <Tetel etel_idref="ET002">
+                    <Darabszam>1</Darabszam>
+                    <VasarlaskoriAr>1800</VasarlaskoriAr>
+                    </Tetel>
+            </RendelesTetelei>
+        </Rendeles>
+        <Rendeles rendeles_id="R002" vevo_idref="V002" etterem_idref="E002" futar_idref="F002">
+            <RendelesIdeje>2025-10-27T20:15:00</RendelesIdeje>
+            <Statusz>Kiszállítás alatt</Statusz>
+            <SzallitasiCim>
+                <Irsz>3529</Irsz>
+                <Varos>Ónod</Varos>
+                <Utca>Honvéd utca</Utca>
+                <Hsz>5</Hsz>
+            </SzallitasiCim>
+            <Vegosszeg>5800</Vegosszeg>
+            <RendelesTetelei>
+                <Tetel etel_idref="ET003">
+                    <Darabszam>2</Darabszam>
+                    <VasarlaskoriAr>2800</VasarlaskoriAr>
+                     </Tetel>
+                </RendelesTetelei>
+        </Rendeles>
+    </Rendelesek>
+
+</EtelRendeloRendszer>
