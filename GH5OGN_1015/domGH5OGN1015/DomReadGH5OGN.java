@@ -1,4 +1,4 @@
-package domneptunkod1015;
+package domGH5OGN1015;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
