@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <!-- egyszerű tipusok - felepites -->
+    <!-- egyszerű tipusok felepites -->
     <xs:element name="EtelRendeloRendszer">
         <xs:complexType>
             <xs:sequence>
@@ -12,8 +12,7 @@
             </xs:sequence>
         </xs:complexType>
 
-
-        <!-- Kulcsok -->
+        <!-- kulcsok -->
         <xs:key name="VasarPK">
             <xs:selector xpath="Vasarlok/Vasarlo"/>
             <xs:field xpath="@vevo_id"/>
@@ -34,8 +33,8 @@
             <xs:selector xpath="Rendelesek/Rendeles"/>
             <xs:field xpath="@rendeles_id"/>
         </xs:key>
+        <!-- idegen kulcsok -->
 
-        <!-- Idegen kulcsok -->
         <xs:keyref name="RendelesVevoFK" refer="VasarPK">
             <xs:selector xpath="Rendelesek/Rendeles"/>
             <xs:field xpath="@vevo_idref"/>
@@ -56,9 +55,13 @@
             <xs:selector xpath="Rendelesek/Rendeles/RendelesTetelei/Tetel"/>
             <xs:field xpath="@etel_idref"/>
         </xs:keyref>
-
+        <!-- 1:1 kapcsolatok -->
+        <xs:unique name="UniqueRendelesFutar">
+            <xs:selector xpath="Rendelesek/Rendeles"/>
+            <xs:field xpath="@futar_idref"/>
+        </xs:unique>
+        <!--Vasarlok tipus -->
     </xs:element>
-    <!-- Vásárlók típusa -->
     <xs:complexType name="VasarlokTipus">
         <xs:sequence>
             <xs:element name="Vasarlo" type="VasarTipus" minOccurs="1" maxOccurs="unbounded"/>
@@ -74,14 +77,14 @@
         </xs:sequence>
         <xs:attribute name="vevo_id" type="xs:string" use="required"/>
     </xs:complexType>
-    <!-- Név típusa -->
+    <!--Név tipus -->
     <xs:complexType name="NevTipus">
         <xs:sequence>
             <xs:element name="Vezeteknev" type="xs:string"/>
             <xs:element name="Keresztnev" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
-    <!-- Cimek típusa -->
+    <!--Cim tipus -->
     <xs:complexType name="CimTipus">
         <xs:sequence>
             <xs:element name="Irsz" type="xs:string"/>
@@ -96,13 +99,12 @@
             <xs:element name="Cim" type="CimTipus" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    <!-- Éttermek típusa -->
     <xs:complexType name="EttermekTipus">
         <xs:sequence>
             <xs:element name="Etterem" type="EtteremTipus" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-
+    <!--Étterem tipus -->
     <xs:complexType name="EtteremTipus">
         <xs:sequence>
             <xs:element name="Nev" type="xs:string"/>
@@ -112,13 +114,12 @@
         </xs:sequence>
         <xs:attribute name="etterem_id" type="xs:string" use="required"/>
     </xs:complexType>
-    <!-- Futárok típusa -->
     <xs:complexType name="FutarokTipus">
         <xs:sequence>
             <xs:element name="Futar" type="FutarTipus" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-
+    <!--Futár tipus -->
     <xs:complexType name="FutarTipus">
         <xs:sequence>
             <xs:element name="Nev" type="NevTipus"/>
@@ -128,13 +129,12 @@
         </xs:sequence>
         <xs:attribute name="futar_id" type="xs:string" use="required"/>
     </xs:complexType>
-    <!-- Étel típusa -->
+    <!--Ételek tipus -->
     <xs:complexType name="EtelekTipus">
         <xs:sequence>
             <xs:element name="Etel" type="EtelTipus" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    <!-- Étel típusa -->
     <xs:complexType name="EtelTipus">
         <xs:sequence>
             <xs:element name="Nev" type="xs:string"/>
@@ -145,13 +145,12 @@
         <xs:attribute name="etel_id" type="xs:string" use="required"/>
         <xs:attribute name="etterem_idref" type="xs:string" use="required"/>
     </xs:complexType>
-
+    <!--Rendelések tipus -->
     <xs:complexType name="RendelesekTipus">
         <xs:sequence>
             <xs:element name="Rendeles" type="RendelesTipus" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    <!-- Rendelés típusa -->
     <xs:complexType name="RendelesTipus">
         <xs:sequence>
             <xs:element name="RendelesIdeje" type="xs:dateTime"/>
@@ -165,13 +164,13 @@
         <xs:attribute name="etterem_idref" type="xs:string" use="required"/>
         <xs:attribute name="futar_idref" type="xs:string" use="required"/>
     </xs:complexType>
-    <!-- Rendelés tételei típusa -->
+    <!--Tételek tipus -->
     <xs:complexType name="RendelesTeteleiTipus">
         <xs:sequence>
             <xs:element name="Tetel" type="TetelTipus" minOccurs="1" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    <!-- tétel típusa -->
+    
     <xs:complexType name="TetelTipus">
         <xs:sequence>
             <xs:element name="Darabszam" type="xs:positiveInteger"/>
