@@ -17,19 +17,13 @@ public class GH5OGNDomParse {
 
             try {
                 switch (choice) {
-                    case "1":
-                        GH5OGNDomRead.main(new String[]{});
-                        break;
-                    case "2":
-                        GH5OGNDomQuery.main(new String[]{});
-                        break;
-                    case "3":
-                        GH5OGNDOMModify.main(new String[]{});
-                        break;
-                    case "0":
+                    case "1" -> GH5OGNDomRead.main(new String[]{});
+                    case "2" -> GH5OGNDomQuery.main(new String[]{});
+                    case "3" -> GH5OGNDOMModify.main(new String[]{});
+                    case "0" -> {
                         return;
-                    default:
-                        System.out.println("Ismeretlen opció.");
+                    }
+                    default -> System.out.println("Ismeretlen opció.");
                 }
             } catch (Exception e) {
                 System.out.println("Hiba történt: " + e.getMessage());

@@ -4,12 +4,7 @@ import org.w3c.dom.*;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.OutputKeys;
-import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import javax.xml.transform.dom.DOMSource;
-import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import org.xml.sax.SAXException;
 
@@ -29,8 +24,6 @@ public class GH5OGNDomRead {
 
         StringWriter buffer = new StringWriter();
         PrintWriter out = new PrintWriter(buffer);
-
-        out.println("Gyökérelem: " + doc.getDocumentElement().getNodeName());
 
         // Vásárlók kiírása
         NodeList vasarlok = doc.getElementsByTagName("Vasarlo");

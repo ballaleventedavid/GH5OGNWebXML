@@ -25,7 +25,7 @@ public class GH5OGNDomQuery {
             Element v = (Element) vasarlok.item(i);
             Element nev = (Element) v.getElementsByTagName("Nev").item(0);
             String teljesNev = text(nev, "Vezeteknev") + " " + text(nev, "Keresztnev");
-            System.out.println("- " + teljesNev + " | " + text(v, "Email"));
+            System.out.println("- " + teljesNev + "  " + text(v, "Email"));
         }
 
         //E001 étteremhez tartozó ételek neve és ára
@@ -34,7 +34,7 @@ public class GH5OGNDomQuery {
         for (int i = 0; i < etelek.getLength(); i++) {
             Element etel = (Element) etelek.item(i);
             if ("E001".equals(etel.getAttribute("etterem_idref"))) {
-                System.out.println("- " + text(etel, "Nev") + " | " + text(etel, "Ar") + " Ft");
+                System.out.println("- " + text(etel, "Nev") + " " + text(etel, "Ar") + " Ft");
             }
         }
 
@@ -45,7 +45,7 @@ public class GH5OGNDomQuery {
             Element r = (Element) rendelesek.item(i);
             int vegosszeg = Integer.parseInt(text(r, "Vegosszeg"));
             if (vegosszeg > 4000) {
-                System.out.println("- " + r.getAttribute("rendeles_id") + ": " + vegosszeg + " Ft | " + text(r, "Statusz"));
+                System.out.println("- " + r.getAttribute("rendeles_id") + ": " + vegosszeg + " Ft  " + text(r, "Statusz"));
             }
         }
 
@@ -55,7 +55,7 @@ public class GH5OGNDomQuery {
         for (int i = 0; i < futarok.getLength(); i++) {
             Element f = (Element) futarok.item(i);
             double ertekeles = Double.parseDouble(text(f, "Ertekeles"));
-            System.out.println("- " + text(f, "Telefonszam") + " | értékelés: " + ertekeles);
+            System.out.println("- " + text(f, "Telefonszam") + "  értékelés: " + ertekeles);
         }
 
         //Rendelések tételeinek darabszáma 
