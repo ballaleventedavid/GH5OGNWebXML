@@ -1,0 +1,201 @@
+{
+    "GH5OGN_orarend": {
+      "ora": [
+        {
+          "@id": "1",
+          "@tipus": "Elmélet",
+          "targy": "Elektrotechnika-elektronika",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "8",
+            "ig": "10"
+          },
+          "helyszin": "3. előadó",
+          "oktato": "Szabó Norbert",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "2",
+          "@tipus": "Elmélet",
+          "targy": "Web technológiák 1.",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "10",
+            "ig": "12"
+          },
+          "helyszin": "5. előadó",
+          "oktato": "Dr. Agárdi Anita",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "3",
+          "@tipus": "Elmélet",
+          "targy": "Angol szaknyelv",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "12",
+            "ig": "14"
+          },
+          "helyszin": "A1/101",
+          "oktato": "Dobronyi Eszter",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "4",
+          "@tipus": "Gyakorlat",
+          "targy": "Web technológiák 1.",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "14",
+            "ig": "16"
+          },
+          "helyszin": "L101",
+          "oktato": "Dr. Agárdi Anita",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "5",
+          "@tipus": "Elmélet",
+          "targy": "Mobil programozási alapok",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "16",
+            "ig": "18"
+          },
+          "helyszin": "L101",
+          "oktato": "Dr. Agárdi Anita",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "6",
+          "@tipus": "Gyakorlat",
+          "targy": "Mobil programozási alapok",
+          "idopont": {
+            "nap": "Hétfő",
+            "tol": "18",
+            "ig": "18"
+          },
+          "helyszin": "L101",
+          "oktato": "Dr. Agárdi Anita",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "7",
+          "@tipus": "Gyakorlat",
+          "targy": "Windows rendszergazda",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "8",
+            "ig": "10"
+          },
+          "helyszin": "L103",
+          "oktato": "Dr. Wagner György",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "8",
+          "@tipus": "Elmélet",
+          "targy": "Mesterséges intelligencia alapok",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "10",
+            "ig": "12"
+          },
+          "helyszin": "E32",
+          "oktato": "Kunné Dr. Tamás Judit",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "9",
+          "@tipus": "Gyakorlat",
+          "targy": "Mesterséges intelligencia alapok",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "12",
+            "ig": "14"
+          },
+          "helyszin": "E32",
+          "oktato": "Kunné Dr. Tamás Judit",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "10",
+          "@tipus": "Gyakorlat",
+          "targy": "Elektrotechnika-elektronika",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "14",
+            "ig": "16"
+          },
+          "helyszin": "T058",
+          "oktato": "Dr. Kozsely Gábor",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "11",
+          "@tipus": "Elmélet",
+          "targy": "Windows rendszergazda",
+          "idopont": {
+            "nap": "Kedd",
+            "tol": "16",
+            "ig": "18"
+          },
+          "helyszin": "L103",
+          "oktato": "Dr. Wagner György",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "12",
+          "@tipus": "Elmélet",
+          "targy": "Szoftvertechnológia",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "8",
+            "ig": "10"
+          },
+          "helyszin": "3. előadó",
+          "oktato": "Dr. Mileff Péter",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "13",
+          "@tipus": "Elmélet",
+          "targy": "Webes adatkezelő környezetek",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "8",
+            "ig": "10"
+          },
+          "helyszin": "T050",
+          "oktato": "Dr. Kovács László József",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "14",
+          "@tipus": "Gyakorlat",
+          "targy": "Szoftvertechnológia",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "10",
+            "ig": "12"
+          },
+          "helyszin": "3. előadó",
+          "oktato": "Dr. Mileff Péter",
+          "szak": "Mérnökinformatikus BSc"
+        },
+        {
+          "@id": "15",
+          "@tipus": "Gyakorlat",
+          "targy": "Webes adatkezelő környezetek",
+          "idopont": {
+            "nap": "Szerda",
+            "tol": "10",
+            "ig": "12"
+          },
+          "helyszin": "L103",
+          "oktato": "Dr. Bednarik László",
+          "szak": "Mérnökinformatikus BSc"
+        }
+      ]
+    }
+  }
