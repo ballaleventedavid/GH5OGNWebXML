@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Órarend Séma",
+    "description": "órarend séma",
+    "type": "object",
+    "properties": {
+      "GH5OGN_orarend": {
+        "type": "object",
+        "properties": {
+          "ora": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "targy": {
+                  "type": "string",
+                  "description": "A tantárgy neve"
+                },
+                "idopont": {
+                  "type": "object",
+                  "properties": {
+                    "nap": {
+                      "type": "string",
+                      "description": "A nap neve "
+                    },
+                    "tol": {
+                      "type": "string",
+                      "description": "Kezdés időpontja"
+                    },
+                    "ig": {
+                      "type": "string",
+                      "description": "Befejezés időpontja"
+                    }
+                  },
+                  "required": [
+                    "nap",
+                    "tol",
+                    "ig"
+                  ]
+                },
+                "helyszin": {
+                  "type": "string",
+                  "description": "Terem vagy épület"
+                },
+                "oktato": {
+                  "type": "string",
+                  "description": "Az oktató neve"
+                },
+                "szak": {
+                  "type": "string",
+                  "description": "A szak "
+                }
+              },
+              "required": [
+                "targy",
+                "idopont",
+                "helyszin",
+                "oktato",
+                "szak"
+              ]
+            }
+          }
+        },
+        "required": [
+          "ora"
+        ]
+      }
+    },
+    "required": [
+      "GH5OGN_orarend"
+    ]
+  }
